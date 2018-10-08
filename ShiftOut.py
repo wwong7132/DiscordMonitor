@@ -59,16 +59,7 @@ if __name__ == "__main__":
     comm = Arduino('COM3')
     monitor = ShiftOut(comm, 11, 8, 12)
     monitor.ShiftOut(0x00)
-    # monitor._pinMode(2, 1)
     while True:
-
-        '''
-        monitor._digitalWrite(2, 0)
-        sleep(1)
-        monitor._digitalWrite(2, 1)
-        sleep(1)
-        '''
-
         monitor.ShiftOut(0x00)
         print(b'0x00')
         sleep(1)

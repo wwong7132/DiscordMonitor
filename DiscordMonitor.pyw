@@ -48,8 +48,7 @@ class DiscordMonitor:
         t_sched.start()
         self.threads['t_sched'] = t_sched
 
-        def run_tray_icon(): SysTrayIcon.SysTrayIcon('dm.ico', 'Discord Monitor', (),
-                                    on_quit=lambda *_: self.exit())
+        def run_tray_icon(): SysTrayIcon.SysTrayIcon('dm.ico', 'Discord Monitor', (), on_quit=lambda *_: self.exit())
 
         # Set up Tray Icon to keep other threads running
         # Exits when only daemon threads left
